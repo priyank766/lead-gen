@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Generation Tool</title>
+        <link rel="icon" href="/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <header class="app-header">
+            <div class="brand">LeadGen</div>
+            <nav class="nav">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Docs</a>
+                <button id="theme-toggle" class="btn ghost" aria-label="Toggle theme">🌙</button>
+            </nav>
+        </header>
+        <div class="container">
+            <h1 class="visually-hidden">Lead Generation Tool</h1>
+            <div id="metrics" class="metrics hidden">
+                <div class="metric"><span class="label">Leads:</span> <span id="m-count">0</span></div>
+                <div class="metric"><span class="label">Email coverage:</span> <span id="m-email">0%</span></div>
+                <div class="metric"><span class="label">Phone coverage:</span> <span id="m-phone">0%</span></div>
+                <div class="metric"><span class="label">Avg score:</span> <span id="m-avg">0</span></div>
+            </div>
+            <div class="controls">
+                <input type="text" id="url-input" placeholder="Enter a URL to scrape">
+                <button id="scrape-button" class="btn primary">
+                    <span class="btn-label">Scrape</span>
+                    <span class="btn-spinner hidden"></span>
+                </button>
+                <button id="export-button" class="btn">Export CSV</button>
+            </div>
+        <div id="loading" class="hidden">Scraping...</div>
+        <div id="results-container" class="hidden">
+            <h2>Results</h2>
+            <table id="results-table" class="data-table">
+                <thead>
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Domain</th>
+                        <th>Emails</th>
+                        <th>Phones</th>
+                        <th>LinkedIn</th>
+                        <th>Contact Pg</th>
+                        <th>Pricing</th>
+                        <th>Validation</th>
+                        <th>Score</th>
+                        <th>Justification</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div id="details-modal" class="modal hidden">
+                <div class="modal-content">
+                    <span id="modal-close" class="close">&times;</span>
+                    <h3>Lead Details</h3>
+                    <pre id="modal-json"></pre>
+                </div>
+            </div>
+        </div>
+        <div id="toast" class="toast hidden"></div>
+        <footer class="app-footer">© LeadGen</footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
