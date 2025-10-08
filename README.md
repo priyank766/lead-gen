@@ -2,6 +2,10 @@
 
 This project is a lead generation tool that scrapes websites, extracts contact information, and scores leads. It provides a FastAPI interface to access the functionality.
 
+
+https://github.com/user-attachments/assets/6eca14eb-0b48-4c21-a260-9282aa483c52
+
+
 ## Features
 
 *   Scrape websites for contact information.
